@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="jumbotron bg-light">
+        <div class="container rounded p-5" id="main">
+            <div class="container text-center">
+                <h1 id="title">freeCodeCamp Survey Form</h1>
+                <p id="description">Thank you for taking the time to help us improve the platform</p>
+            </div>
+            <div class="container px-5">
+                <form id="survey-form" class="p-5">
+                    <div class="form-group row px-5">
+                        <label for="name" class="questions col-sm-5 col-form-label" id="name-label">Name</label>
+                        <input type="name" class="form-control col-sm-6" id="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group row px-5">
+                        <label for="email" class="questions col-sm-5 col-form-label" id="email-label">Email</label>
+                        <input type="email" class="form-control col-sm-6" id="email" placeholder="email@domain.com"
+                            required>
+                    </div>
+                    <div class="form-group row px-5">
+                        <label for="number" class="questions col-sm-5 col-form-label" id="number-label">Age</label>
+                        <input type="number" min="18" max="123" class="form-control col-sm-6" id="number"
+                            placeholder="age" required>
+                    </div>
+                    <div class="form-group row px-5">
+                        <label for="occupation" class="questions col-sm-5 col-form-label">Occupation</label>
+                        <select class="form-control col-sm-6" id="dropdown" required>
+                            <option selected disabled>Please select an option.</option>
+                            <option>Student</option>
+                            <option>Full-time learner</option>
+                            <option>Full-time job</option>
+                            <option>Prefer not to say</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row px-5">
+                        <div class="row col-sm-5 py-3">
+                            <label for="radioGroup" class="qCheckRadio col col-form-label">Would you recommend freeCodeCamp to a friend?</label>
+                        </div>
+                        <div class="row col-sm-6 py-3">
+                            <ul>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioRecommend" id="yesRecommend"
+                                        value="option1">
+                                    <label class="form-check-label" for="yesRecommend">
+                                        Definitely
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioRecommend" id="noRecommend"
+                                        value="option2">
+                                    <label class="form-check-label" for="noRecommend">
+                                        Maybe
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioRecommend" id="someRecommend"
+                                        value="option3">
+                                    <label class="form-check-label" for="someRecommend">
+                                        Not sure
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group row px-5">
+                        <label for="favorite" class="questions col-sm-5 col-form-label">What is your favorite feature of freeCodeCamp? </label>
+                        <select class="form-control col-sm-6" id="dropdown" required>
+                            <option selected disabled>Please select an option.</option>
+                            <option>Challenges</option>
+                            <option>Projects</option>
+                            <option>Community</option>
+                            <option>Open Source</option>
+                        </select>
+                    </div>
+                    <div class="form-row px-5">
+                        <div class="row col-sm-5">
+                            <label for="radioGroup" class="qCheckRadio col col-form-label">What would you like to see improved? (Check all that apply)</label>
+                        </div>
+                        <div class="row col-sm-6">
+                            <ul>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="feprojects"
+                                        value="feprojects">
+                                    <label class="form-check-label" for="feprojects">
+                                        Front-end Projects
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="beprojects"
+                                        value="beprojects">
+                                    <label class="form-check-label" for="beprojects">
+                                        Back-end Projects
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="datavis"
+                                        value="datavis">
+                                    <label class="form-check-label" for="datavis">
+                                        Data Visualization
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="challenges"
+                                        value="challenges">
+                                    <label class="form-check-label" for="challenges">
+                                        Challenges
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="community"
+                                        value="community">
+                                    <label class="form-check-label" for="community">
+                                        Open Source Community
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="forum"
+                                        value="forum">
+                                    <label class="form-check-label" for="forum">
+                                        Forum
+                                    </label>
+                                </li>
+                                <li class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="checkImprove" id="courses"
+                                        value="courses">
+                                    <label class="form-check-label" for="courses">
+                                        Additional Courses
+                                    </label>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row px-5">
+                        <label for="textArea" class="questions col-sm-5">Any comments or suggestions?</label>
+                        <textarea class="form-control col-sm-6" id="textArea" rows="3"
+                            placeholder="Enter your comment here..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn text-light" id="submit">Submit Survey</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer text-center text-dark mb-4">
+        <h5 class="font-weight-light">@fayazsayed</h5>
+    </footer>
+</body>
+
+</html>
