@@ -32,6 +32,7 @@ function App() {
     getQuote();
     setIsLoading(false);
   }, [isLoading]);
+  const twitterWebIntent = `https://twitter.com/intent/tweet?via=FayazSaidThis&url=${window.location.href}`
   return (
     <Fragment>
          <div className="spinner-border text-info d-none" role="status">
@@ -46,12 +47,9 @@ function App() {
         <div className="quote-box p-4 col col-sm-12 col-md-6">
           <QuoteText quote={quote} error={error} />
           <div className="controls d-flex flex-row flex-nowrap">
-            <button className="btn btn-primary w-auto mr-2">
-              <i className="icon-instagram"></i>
-            </button>
-            <button className="btn btn-primary w-auto">
+            <a target="_blank" title="Share on Twitter" href={`${twitterWebIntent}&text=${quote}`} className="btn btn-primary w-auto">
               <i className="icon-twitter"></i>
-            </button>
+            </a>
             <button
               disabled={isLoading}
               onClick={getQuote}
