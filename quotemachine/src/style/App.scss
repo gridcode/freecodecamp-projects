@@ -8,6 +8,7 @@ body {
   color: --main-txt-color;
 }
 .container{
+  opacity: 0;
   &.fadeIn{
     opacity: 1;
     transition: opacity 1s;

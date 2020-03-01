@@ -8,10 +8,10 @@ function App() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const getQuote = async () => {
-    var qbox = document.querySelector(".container");
+    var containerEl = document.querySelector(".container");
     var spinner = document.querySelector(".spinner-border");
-    qbox.classList.remove("fadeIn");
-    qbox.classList.add("fadeOut");
+    containerEl.classList.remove("fadeIn");
+    containerEl.classList.add("fadeOut");
     spinner.classList.remove("d-none");
     await Axios.get("https://api.kanye.rest", {
       headers: { "Content-Type": "application/json" }
@@ -21,8 +21,8 @@ function App() {
         else setError(response.statusText);
         var bodyEl = document.querySelector("body");
         bodyEl.style.backgroundColor = randomcolor({ luminosity: "light" });
-        qbox.classList.remove("fadeOut");
-        qbox.classList.add("fadeIn");
+        containerEl.classList.remove("fadeOut");
+        containerEl.classList.add("fadeIn");
         spinner.classList.add("d-none");
       })
       .catch(err => setError(err.message));
