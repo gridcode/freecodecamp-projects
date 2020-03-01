@@ -1,0 +1,33 @@
+@import "../fontello/css/fontello.css";
+@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+$radius: 5px;
+$shadow: 1px 1px 1px 1px #ccc;
+body {
+  font-family: 'Simonetta';
+  background-color: --main-bg-color;
+  color: --main-txt-color;
+}
+.container{
+  &.fadeIn{
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  &.fadeOut{
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  transition: opacity 1s;
+}
+.quote-box {
+  background-color: #fdfdfd;
+  font-size: 1.5rem;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+.spinner-border{
+  position: absolute;
+  top:50%;
+  right: 50%
+}
